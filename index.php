@@ -14,4 +14,23 @@ echo "HelloWorld!";
  * HOW SERVERS WORK
  * They are programmed to respond to http request
 */
+$name = 'Emmanuel';
+$age = 30;
+$Height = 5.9;
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP CLASS</title>
+</head>
+<body>
+   <section>
+    <div>Name: <?php echo$name?> </div>
+    <div>age: <?php echo$age?> </div>
+    <div> Height: <?php echo$Height?> </div>
+   </section> 
+</body>
+</html>
