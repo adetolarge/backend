@@ -13,6 +13,12 @@ echo "HelloWorld!";
  * const variable doesn't change just like in javascript
  * HOW SERVERS WORK
  * They are programmed to respond to http request
+ * OPERATORS IN PHP
+ * 1 Arithmetic operators. (addition subtraction multiplication division, modulus(%), eponent(**))
+ * 2 Comparisons Operators. (single equal(assignment), double equal(comarison operator that gives boolean), tripple equal(checks the data tyepe and the vales),!=(not equal), <>not equal, greater than less than etc..)
+ * 3. Assignment operator i.e equal to sign. for assigning values to a varibles
+ * 4. Conditional Operators. used to check values between booleans. i.e logic gates 
+ * 
 */
 $name = 'Emmanuel';
 $age = 30;
