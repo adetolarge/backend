@@ -49,14 +49,11 @@ else{
 */
 // EXAMPLE OF THE FOR EACH STATEMENT IN JS AND PHP
 
+
 $x = ["Mango", "orange", "Pawpaw"];
 foreach($x as $item){
     echo "<br>" .$item;
 }
-
-
-
-
 
 
 
