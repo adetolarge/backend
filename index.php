@@ -46,8 +46,19 @@ else{
  * in php we don't need to use plus sign we use the dot sign
  * FOR EACH LOOP: A loop used only on arrays
  * 
+ * The break statement is used when one wants to prematurely terminate a loop\
+ * The continue skips the iteration in the array..
 */
 // EXAMPLE OF THE FOR EACH STATEMENT IN JS AND PHP
+// PHP BUILT IN FUNCTIONS
+/**
+ * Arguments 
+ * informations can be passed to functions through arguements, arguements are just like variables,
+ * When a function is being declared, we h
+ * 
+ * The return Statement is used in storing the variable wherever it is being called
+ * The return is the ending point of the function,
+ * */ 
 
 
 $x = ["Mango", "orange", "Pawpaw"];
@@ -87,7 +98,7 @@ foreach($x as $item){
 //     alert("Bye World")
 // }
 
-// FOR EACH IN JS
+// FOR EACH IN JS 
 var x = ["Mango", "orange", "Pawpaw"];
 x.forEach((item)=>{
     console.log(item)
