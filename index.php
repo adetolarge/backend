@@ -1,5 +1,5 @@
 <?php
-echo "HelloWorld!";
+// echo "HelloWorld!";
 // the dollar sign $ in the variable declaration. datatypes still retain their syntax except from objects.
 /** PHP is wide space insensive ie. $x = 5; this is for variable declaration 
  * variables are declared with the dollar sign and the assignment operators in php.
@@ -20,11 +20,47 @@ echo "HelloWorld!";
  * 4. Conditional Operators. used to check values between booleans. i.e logic gates 
  * 
 */
-$name = 'Emmanuel';
-$age = 30;
-$Height = 5.9;
-?>
+// $name = 'Emmanuel';
+// $age = 30;
+// $Height = 5.9;
 
+
+?>
+<?php
+$x = 2;
+$y = 2;
+$z = 1;
+
+if($x == $y){
+    print("Hello World");
+
+}elseif($x == $z){
+    print("Maybe World");
+}
+else{
+    print("Bye World");
+}
+
+
+/** How to use the 
+ * in php we don't need to use plus sign we use the dot sign
+ * FOR EACH LOOP: A loop used only on arrays
+ * 
+*/
+// EXAMPLE OF THE FOR EACH STATEMENT IN JS AND PHP
+
+$x = ["Mango", "orange", "Pawpaw"];
+foreach($x as $item){
+    echo "<br>" .$item;
+}
+
+
+
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,10 +69,31 @@ $Height = 5.9;
     <title>PHP CLASS</title>
 </head>
 <body>
-   <section>
+   <!-- <section>
     <div>Name: <?php echo$name?> </div>
     <div>age: <?php echo$age?> </div>
-    <div> Height: <?php echo$Height?> </div>
+    <div> Height: <?php echo$Height?> </div> -->
    </section> 
 </body>
+<script>
+//     let x = 2;
+//     let y = 1;
+//     let z = 2;
+
+// if(x == y){
+//     alert("Hello World")
+
+// }else if(x == z){
+//     alert("Maybe World")
+// }
+// else{
+//     alert("Bye World")
+// }
+
+// FOR EACH IN JS
+var x = ["Mango", "orange", "Pawpaw"];
+x.forEach((item)=>{
+    console.log(item)
+})
+</script>
 </html>
