@@ -100,6 +100,10 @@ foreach($x as $item){
 
 // FOR EACH IN JS 
 var x = ["Mango", "orange", "Pawpaw"];
+
+
+
+
 x.forEach((item)=>{
     console.log(item)
 })
