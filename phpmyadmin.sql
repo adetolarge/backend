@@ -3,21 +3,15 @@ INSERT INTO `user_data` (`id`, `email`, `username`, `password`, `role`) VALUES (
 
 
 -- READ USER
-SELECT `1232`, `adetolarger@gmail.com`, `adetolarger`, `123456`, `1` FROM `user_data` WHERE 1
--- RESULT BROUGHT
-SELECT
-    `1232`,
-    `adetolarger@gmail.com`,
-    `adetolarger`,
-    `123456`,
-    `1`
-FROM
-    `user_data`
-WHERE
-    1
+SELECT * from `user_data` WHERE 1 
+-- THE CODE ABOVE WILL BRING ALL THE DATA OF THE USER
+-- TO SELECT SPECIFIC COLUMN
+SELECT `email`, `username`, `role` from `user_data` WHERE 1
+-- TRY AS MUCH AS POSSIBLE NOT TO USE * unless when needed
 
--- UPDATE USERr
-UPDATE `user_data` SET `id`='[1233]',`email`='[tolarge@gmail.com]',`username`='[Tolarge]',`password`='[123456]',`role`='[1]' WHERE 1
+
+-- UPDATE USER 
+UPDATE `user_data` SET `id`= 1 WHERE 1
 -- RESULT
 UPDATE
     `user_data`
