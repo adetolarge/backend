@@ -7,8 +7,6 @@ if ($db->connect_errno){
 }
 
 
-
-
 // $db ->query("INSERT into `product_name`
 // (`seller_id`, `title`, `description`, `rating`, `image`, `price`) VALUES
 // (?,?,?,?,?,?)");
