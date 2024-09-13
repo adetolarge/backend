@@ -1,5 +1,5 @@
 -- Create user
-INSERT INTO `user_data` (`id`, `email`, `username`, `password`, `role`) VALUES ('1231', 'adetolarge@gamil.com', 'tolarge', '585658', '1');
+INSERT INTO `user_data` (`id`, `email`, `username`, `password`, `role`) VALUES ('?', '?', '?', '?', '?');
 
 
 -- READ USER
