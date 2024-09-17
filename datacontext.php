@@ -1,5 +1,5 @@
 <?php
-session_start()
+session_start();
 // $db = new mysqli("localhost", "root","", "tola_practice");
 // if ($db->connect_errno){
 //     die;
@@ -37,7 +37,7 @@ if ($db->connect_errno){
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    if($_SESSION["CSRF-TOKEN"] != $_POST["CSRF-Token"]){
+    if($_SESSION["CSRF-Token"] != $_POST["CSRF-Token"]){
         echo "Error Veryfying CSRF TOKEN";
     }else{
         $id = $_POST['id'];
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $rating = $_POST['rating'];
         $image = $_POST["image"];
         $price = $_POST['price'];
-    
+// validate this data here
         $query = ("INSERT INTO product_name (`id`, `seller_id`, `title`, `description`, `rating`, `image`, `price`) VALUES (?, ?, ?, ?, ?, ?, ?)");
     
         $stmt = $db->prepare($query);
@@ -95,7 +95,7 @@ $_session["CSRF-Token"] = uniqid();
     <input type="file" id="image" name="image"><br><br>
     <label for="price">price:</label>
     <input type="text" id="price" name="price"><br><br>  
-    <input type="hidden" name="CSRF-token" value="<?php echo $_SESSION["CSRF-TOKEN"]?>"> 
+    <input type="hidden" name="CSRF-Token" value="<?php echo $_SESSION["CSRF-Token"]?>"> 
     <input type="submit" value="Submit">
 </form>
 
