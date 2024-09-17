@@ -44,23 +44,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $image = $_POST["image"];
     $price = $_POST['price'];
 
-    $stmt = $db->prepare("INSERT INTO product_name (`id`, `seller_id`, `title`, `description`, `rating`, `image`, `price`) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $query = ("INSERT INTO product_name (`id`, `seller_id`, `title`, `description`, `rating`, `image`, `price`) VALUES (?, ?, ?, ?, ?, ?, ?)");
 
-    $result = $stmt->execute([
-        $id,
-        $seller_id,
-        $title,
-        $description,
-        $rating,
-        $image,
-        $price
-    ]);
-
-    if ($result) {
-        echo "New record created successfully";
-    } else {
-        echo "Error: ";
+    $stmt = $db->prepare($query);
+    if($stmt){
+        $stmt->bind_param('iissisi',$id, $seller_id, $title, $description, $rating, $image, $price);
+        $id;
+        $seller_id;
+        $title;
+        $description;
+        $rating;
+        $image;
+        $price;
+        $stmt->execute();    
     }
+
+    // if ($db) {
+    //     echo "New record created successfully";
+    // } else {
+    //     echo "Error: ";
+    // }
 }
 $db->close();
 
