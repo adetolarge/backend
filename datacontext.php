@@ -37,7 +37,8 @@ if ($db->connect_errno){
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    if($_SESSION["CSRF-Token"] != $_POST["CSRF-Token"]){
+
+    if ($_SESSION["CSRF-Token"] != $_POST["CSRF-Token"]){
         echo "Error Veryfying CSRF TOKEN";
     }else{
         $id = $_POST['id'];
@@ -47,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $rating = $_POST['rating'];
         $image = $_POST["image"];
         $price = $_POST['price'];
-// validate this data here
+        // validate this data here
         $query = ("INSERT INTO product_name (`id`, `seller_id`, `title`, `description`, `rating`, `image`, `price`) VALUES (?, ?, ?, ?, ?, ?, ?)");
     
         $stmt = $db->prepare($query);
@@ -63,19 +64,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $stmt->execute();    
         }
     }
-
-
-
-
     // if ($db) {
     //     echo "New record created successfully";
     // } else {
     //     echo "Error: ";
     // }
 }
-$db->close();
 
-$_session["CSRF-Token"] = uniqid();
+$_SESSION["CSRF-Token"] = uniqid();
 
 
 ?>
@@ -95,7 +91,7 @@ $_session["CSRF-Token"] = uniqid();
     <input type="file" id="image" name="image"><br><br>
     <label for="price">price:</label>
     <input type="text" id="price" name="price"><br><br>  
-    <input type="hidden" name="CSRF-Token" value="<?php echo $_SESSION["CSRF-Token"]?>"> 
+    <input type="hidden" id="CSRF-Token" name="CSRF-Token" value="<?php echo $_SESSION["CSRF-Token"];?>"> 
     <input type="submit" value="Submit">
 </form>
 
