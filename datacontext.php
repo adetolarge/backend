@@ -26,9 +26,7 @@
 //     $price = 2500;
 //     $stmt->execute();    
 // }
-
 // // ?> 
-
 
 <?php
 $db = new mysqli("localhost", "root","", "tola_practice");
@@ -45,16 +43,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $rating = $_POST['rating'];
     $image = $_POST["image"];
     $price = $_POST['price'];
-    
 
-    $query = "INSERT INTO product_name (`id`, `seller_id`, `title`, `description`, `rating`, `image`, `price`) VALUES ($id, $seller_id, '$title', '$description', $rating, '$image', $price)";
-    if ($db->query($query) === TRUE) {
+    $stmt = $db->prepare("INSERT INTO product_name (`id`, `seller_id`, `title`, `description`, `rating`, `image`, `price`) VALUES (?, ?, ?, ?, ?, ?, ?)");
+
+    $result = $stmt->execute([
+        $id,
+        $seller_id,
+        $title,
+        $description,
+        $rating,
+        $image,
+        $price
+    ]);
+
+    if ($result) {
         echo "New record created successfully";
     } else {
-        echo "Error: " . $query . "<br>" . $db->error;
+        echo "Error: ";
     }
 }
-// Close connection
 $db->close();
 
 
