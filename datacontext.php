@@ -49,8 +49,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $image = $_POST["image"];
         $price = $_POST['price'];
         // validate this data here
-        if(strlen($rating) < 1){
-            echo "rating must be between 1 - 5";
+        if(strlen($description) < 20){
+            echo "rating must be between 1 - 20";
         }
 
         if(empty($_POST["title"])){
