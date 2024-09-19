@@ -1,0 +1,17 @@
+{
+    "name": "backend/backend",
+    "description": "a new project",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Backend\\Backend\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Adelaja Adetola"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
